@@ -1,5 +1,8 @@
 # laotzi-demo
 
+*An LFE Demo of the Ten Thousand Things*
+
+<img src="resources/images/DaodeTianzun.jpg" />
 
 ## Introduction
 
