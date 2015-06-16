@@ -1,14 +1,14 @@
 var chart = circularHeatChart()
-    .segmentHeight(20)
-    .innerRadius(20)
-    .numSegments(24)
+    .segmentHeight(10)
+    .innerRadius(0)
+    .numSegments(100)
     .radialLabels(null)
     .segmentLabels(null)
-    .margin({top: 20, right: 0, bottom: 50, left: 280});
+    .margin({top: 20, right: 0, bottom: 50, left: 200});
 
 /* An array of objects */
 data = [];
-for(var i=0; i<240; i++) {
+for(var i=0; i<3000; i++) {
     data[i] = {title: "Segment "+i, value: Math.round(Math.random()*100)};
 }
 
