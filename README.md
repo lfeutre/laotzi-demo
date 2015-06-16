@@ -6,26 +6,22 @@
 
 ## Introduction
 
-Add content to me here!
+Steven Proctor emailed Robert and I about an interesting LFE demo. This is the
+demo that was born of that discussion.
 
 
 ## Installation
 
-Just add it to your ``rebar.config`` deps:
+Just clone it:
 
-```erlang
-  {deps, [
-    ...
-    {laotzi-demo, ".*",
-      {git, "git@github.com:YOURNAME/laotzi-demo.git", "master"}}
-      ]}.
+```bash
+$ git clone git@github.com:oubiwann/laotzi-demo.git
 ```
 
 And then do the usual:
 
 ```bash
-    $ rebar get-deps
-    $ rebar compile
+    $ make
 ```
 
 
