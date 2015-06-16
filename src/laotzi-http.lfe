@@ -4,6 +4,11 @@
 (include-lib "lmug/include/request.lfe")
 (include-lib "lmug/include/response.lfe")
 
+(defun start ()
+  (lmug-barista-adapter:run
+    #'dispatch-handler/1
+    '(#(port 5099))))
+
 (defun dispatch-handler
   ;; HTML
   (((= (match-request path "/") request))
@@ -31,11 +36,6 @@
    (get-json request))
   ((request)
    (not-found request)))
-
-(defun run ()
-  (lmug-barista-adapter:run
-    #'dispatch-handler/1
-    '(#(port 5099))))
 
 (defun home ()
   (make-response

@@ -70,12 +70,12 @@ compile-tests: clean-eunit
 repl: compile
 	@which clear >/dev/null 2>&1 && clear || printf "\033c"
 	@echo "Starting an LFE REPL ..."
-	@PATH=$(SCRIPT_PATH) ERL_LIBS=$(ERL_LIBS) $(LFETOOL) repl lfe +pc unicode
+	@PATH=$(SCRIPT_PATH) ERL_LIBS=$(ERL_LIBS) $(LFETOOL) repl lfe +pc unicode -s laotzi-http
 
 repl-no-deps: compile-no-deps
 	@which clear >/dev/null 2>&1 && clear || printf "\033c"
 	@echo "Starting an LFE REPL ..."
-	@PATH=$(SCRIPT_PATH) ERL_LIBS=$(ERL_LIBS) $(LFETOOL) repl lfe +pc unicode
+	@PATH=$(SCRIPT_PATH) ERL_LIBS=$(ERL_LIBS) $(LFETOOL) repl lfe +pc unicode -s laotzi-http
 
 shell: compile
 	@which clear >/dev/null 2>&1 && clear || printf "\033c"
