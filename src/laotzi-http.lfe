@@ -31,6 +31,8 @@
    (get-js request))
   (((= (match-request path "/js/highlight.min.js") request))
    (get-js request))
+  (((= (match-request path "/js/jquery-2.1.4.min.js") request))
+   (get-js request))
   ;; Data
   (((= (match-request path "/data.json") request))
    (get-json request))
