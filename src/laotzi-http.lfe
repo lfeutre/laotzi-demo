@@ -27,7 +27,7 @@
    (get-js request))
   (((= (match-request path "/js/circularHeatChart.js") request))
    (get-js request))
-  (((= (match-request path "/js/example.js") request))
+  (((= (match-request path "/js/lfe-proc-map.js") request))
    (get-js request))
   (((= (match-request path "/js/highlight.min.js") request))
    (get-js request))
