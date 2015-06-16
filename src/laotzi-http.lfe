@@ -1,41 +1,52 @@
 (defmodule laotzi-http
   (export all))
 
-(include-lib "inets/include/httpd.hrl")
 (include-lib "lmug/include/request.lfe")
 (include-lib "lmug/include/response.lfe")
 
 (defun dispatch-handler
-  (((= (match-request path "/data.json") request))
-   (io:format "Request: ~p" (list request))
-   (make-response
-    status 200
-    headers '(#("content-type" "application/json"))
-    body "{data: \"Hello World\"}"))
   (((= (match-request path "/") request))
-   (io:format "Request: ~p" (list request))
-   (make-response
-    status 200
-    headers '(#("content-type" "text/html"))
-    body "<html><body>Hello World</body></html>"))
+   (home))
   (((= (match-request path "/css/style.css") request))
-   (let* ((`#(ok ,cwd) (file:get_cwd))
-          (filename (++ cwd "/www" (request-path request)))
-          (`#(ok ,content) (file:read_file filename)))
-     (io:format "Content: ~p~n" (list content))
-     (make-response
-      status 200
-      headers '(#("content-type" "text/css"))
-      body (unicode:characters_to_list content))))
+   (style-css request))
+  (((= (match-request path "/data.json") request))
+   (data-json request))
   ((request)
-   (io:format "Fields: ~p~n" (list (fields-request)))
-   (io:format "Request: ~p~n" (list request))
-   (make-response
-    status 200
-    headers '(#("content-type" "text/html"))
-    body "<html><body>not supported</body></html>")))
+   (not-found request)))
 
 (defun run ()
   (lmug-barista-adapter:run
     #'dispatch-handler/1
     '(#(port 5099))))
+
+(defun home ()
+  (make-response
+   status 200
+   headers '(#("content-type" "text/html"))
+   body "<html><body>Hello World</body></html>"))
+
+(defun data-json (request)
+  (make-response
+   status 200
+   headers '(#("content-type" "application/json"))
+   body "{data: \"Hello World\"}"))
+
+(defun style-css (request)
+  (make-response
+   status 200
+   headers '(#("content-type" "text/css"))
+   body (read-file request)))
+
+(defun not-found (request)
+  (io:format "Fields: ~p~n" (list (fields-request)))
+  (io:format "Request: ~p~n" (list request))
+  (make-response
+   status 404
+   headers '(#("content-type" "text/html"))
+   body "<html><body><strong>Resource not found.</strong></body></html>"))
+
+(defun read-file (request)
+  (let* ((`#(ok ,cwd) (file:get_cwd))
+         (filename (++ "/www" (request-path request)))
+         (`#(ok ,content) (file:read_file filename)))
+    (unicode:characters_to_list content)))
