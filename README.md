@@ -63,6 +63,20 @@ you can manually add children to the supervisor with the following:
  #(undefined <0.62.0> worker (laotzi-demo-server)))
 ```
 
+You can add hundreds at a time with this function:
+
+```cl
+> (laotzi-demo:add 492)
+ok
+```
+
+Or thousands:
+
+```cl
+> (laotzi-demo:add 2500)
+ok
+```
+
 
 ## Under the Hood
 

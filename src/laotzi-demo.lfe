@@ -2,7 +2,7 @@
   (behaviour application)
   (export (start 0) (start 2)
           (stop 1)
-          (add 0)
+          (add 0) (add 1)
           (get-children 0)))
 
 (defun start ()
@@ -22,6 +22,10 @@
 
 (defun add ()
   (laotzi-demo-sup:add))
+
+(defun add (count)
+  (lists:map (lambda (_) (add)) (lists:seq 1 count))
+  'ok)
 
 (defun get-children ()
   (laotzi-demo-sup:get-children))
