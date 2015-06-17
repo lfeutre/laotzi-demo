@@ -9,6 +9,9 @@
     #'dispatch-handler/1
     '(#(port 5099))))
 
+(defun stop ()
+  (exit (whereis 'lmug-handler) 'kill))
+
 (defun dispatch-handler
   ;; HTML
   (((= (match-request path "/") request))

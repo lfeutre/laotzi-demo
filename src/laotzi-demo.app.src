@@ -2,7 +2,7 @@
 {application, 'laotzi-demo',
  [
   %% A quick description of the application.
-  {description, "My project description..."},
+  {description, "An LFE Demo of the Ten Thousand Things ..."},
 
   %% The version of the application
   {vsn, "0.0.1"},
@@ -10,9 +10,11 @@
   %% All modules used by the application.
   {modules,
    [
-    'laotzi-demo-app',
+    'laotzi-demo',
     'laotzi-demo-server',
-    'laotzi-demo-sup'
+    'laotzi-demo-sup',
+    'laotzi-demo-util',
+    'laotzi-http'
    ]},
 
   %% All of the registered names the application uses. This can be ignored.
@@ -33,7 +35,7 @@
   {included_applications, []},
 
   %%
-  {mod, {'laotzi-demo-app', []}},
+  {mod, {'laotzi-demo', []}},
 
   %% configuration parameters similar to those in the config file specified
   %% on the command line. can be fetched with gas:get_env
