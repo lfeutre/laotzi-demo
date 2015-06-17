@@ -104,7 +104,17 @@ each process's number of reductions to ``./www/data.json``):
 With that done, we can now open http://localhost:5099/ in your browser, where
 you will be greeted with something like the following:
 
-<img src="resources/images/screenshot.png" />
+<a src="resources/images/screenshot-0.png"><img src="resources/images/screenshot-0-thumb.png" /></a>
+
+As time passes, you'll see that heatmap evolve along these lines:
+
+<a src="resources/images/screenshot-1.png"><img src="resources/images/screenshot-1-thumb.png" /></a>
+
+<a src="resources/images/screenshot-2.png"><img src="resources/images/screenshot-2-thumb.png" /></a>
+
+<a src="resources/images/screenshot-3.png"><img src="resources/images/screenshot-3-thumb.png" /></a>
+
+<a src="resources/images/screenshot-4.png"><img src="resources/images/screenshot-4-thumb.png" /></a>
 
 This page has jquery AJAX polling set up, so you should see changes every 8 seconds or so. This will chew up your CPU, so don't leave it running :-)
 
