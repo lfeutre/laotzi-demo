@@ -4,14 +4,22 @@
 
 <img src="resources/images/DaodeTianzun.jpg" />
 
+**Table of Contents**
 
-## Introduction
+* [Introduction](#introduction-)
+* [Setup](#setup-)
+* [Usage](#usage-)
+* [Under the Hood](#under-the-hood-)
+* [Ideas for Future Work](#ideas-for-future-work-)
+
+
+## Introduction [&#x219F;](#table-of-contents)
 
 Steven Proctor emailed Robert and I about an interesting LFE demo. This is the
 demo that was born of that discussion.
 
 
-## Setup
+## Setup [&#x219F;](#table-of-contents)
 
 Just clone it:
 
@@ -30,7 +38,7 @@ REPL (also automatically starting the ``laotzi-demo`` application and the
 built-in web server).
 
 
-## Usage
+## Usage [&#x219F;](#table-of-contents)
 
 From the REPL where the ``laotzi-demo`` application has been started,
 you can manually add children to the supervisor with the following:
@@ -120,7 +128,7 @@ As time passes, you'll see that heatmap evolve along these lines:
 This page has jquery AJAX polling set up, so you should see changes every 8 seconds or so. This will chew up your CPU, so don't leave it running :-)
 
 
-## Under the Hood
+## Under the Hood [&#x219F;](#table-of-contents)
 
 Here are the interesting things that this demo applications does:
 
@@ -143,7 +151,7 @@ Here are the interesting things that this demo applications does:
 * Makes use of the d3.js data visualization library.
 
 
-## Ideas for Future Work
+## Ideas for Future Work [&#x219F;](#table-of-contents)
 
 Setting aside the features that need to be added to the various nascent dependencies, here are some cool things to do:
 
