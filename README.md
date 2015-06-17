@@ -37,6 +37,16 @@ This will download and compile all the dependencies, and then start the LFE
 REPL (also automatically starting the ``laotzi-demo`` application and the
 built-in web server).
 
+### Bypassing ``localhost`` Default
+
+If you'd like to run this demo's httpd server (which uses [barista](https://github.com/lfex/barista))
+on the non-loopback network interface, you'll need to update the ``start/1`` function in ``src/laotzi-http.lfe``:
+
+* Open up the file and go to ``start/1`` -- it should be close to the top of the module
+* In the same proplist that ``#(port 5099)`` is defined, add another element: ``#(host "your.ip.addr.ess")``
+* Save the file, run ``make repl`` (or ``make repl-no-deps``, if you've already downloaded and built the deps)
+* Load up the demo at http://your.ip.addr.ess:5099/
+
 
 ## Usage [&#x219F;](#table-of-contents)
 
