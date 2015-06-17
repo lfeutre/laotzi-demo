@@ -87,8 +87,6 @@
 (defun get-fullpath (request)
   (let* ((`#(ok ,cwd) (file:get_cwd))
          (filename (++ cwd "/www" (extract-path request))))
-    (io:format "cwd: ~p~n" `(,cwd))
-    (io:format "filename: ~p~n" `(,filename))
     filename))
 
 (defun extract-path
