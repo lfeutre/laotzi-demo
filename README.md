@@ -141,3 +141,15 @@ Here are the interesting things that this demo applications does:
   JSON data.
 
 * Makes use of the d3.js data visualization library.
+
+
+## Ideas for Future Work
+
+Setting aside the features that need to be added to the various nascent dependencies, here are some cool things to do:
+
+* Add support for websockets and streaming monitoring data
+* Update the d3.js heatmap data one cell at a time, based upon stream data (using websockets)
+* Demonstrate swapping out YAWS, Cowboy, and native httpd
+* Make the d3.js example more configurable so that changing total nodes created from 3000 to 500 or to 10,000 doesn't involve changing code
+* Show more than just reductions
+* Use additional visualization metaphors
