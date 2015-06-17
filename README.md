@@ -86,8 +86,8 @@ If you want to enable stats-gathering, do the following:
 ok
 ```
 
-Let's make things interesting, and have the processes some code of varrying
-number of executions:
+Let's make things interesting, and have the processes run code of varrying
+number of calls:
 
 ```cl
 > (laotzi-demo:execute-tasks)
