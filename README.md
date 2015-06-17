@@ -114,15 +114,15 @@ number of calls:
 ```
 
 You can have the demo start tracking stats (in this case, repeatedly saving
-each process's number of reductions to ``./www/data.json``):
+each process' number of reductions to ``./www/data.json``):
 
 ```cl
 > (laotzi-demo:start-tracking)
 #(ok #(interval #Ref<0.0.0.9079>))
 ```
 
-With that done, we can now open http://localhost:5099/ in your browser, where
-you will be greeted with something like the following:
+With that done, we can now open http://localhost:5099/ in our browser, where
+we will be greeted with something like the following:
 
 <a src="resources/images/screenshot-0.png"><img src="resources/images/screenshot-0-thumb.png" /></a>
 
