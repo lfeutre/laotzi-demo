@@ -67,7 +67,7 @@
   (make-response
    status 200
    headers '(#("content-type" "application/json"))
-   body "{data: \"Hello World\"}"))
+   body (read-file request)))
 
 (defun not-found (request)
   (io:format "Fields: ~p~n" (list (fields-request)))
