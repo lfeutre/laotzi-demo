@@ -8,6 +8,13 @@
   (++ (lutil:get-versions)
       `(#(laotzi-demo ,(get-version)))))
 
+(defun write-fake (count)
+  (file:write_file "www/data.json" (generate-fake count)))
+
+(defun generate-fake (count)
+  (let ((data (lists:map (lambda (_) (random:uniform)) (lists:seq 1 count))))
+    (generate-json data)))
+
 (defun generate-json (data)
   (ljson:encode
     (lists:map #'process-node/1
@@ -15,7 +22,7 @@
 
 (defun process-node
   ((`#(,idx ,x))
-   `(#(title ,(++ "Node " (integer_to_list idx)))
+   `(#(title ,(list_to_binary (++ "Node " (integer_to_list idx))))
      #(value ,x))))
 
 (defun enumerate (data)
