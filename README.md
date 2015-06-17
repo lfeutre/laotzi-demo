@@ -75,7 +75,38 @@ Or thousands:
 ```cl
 > (laotzi-demo:add 2500)
 ok
+> (length (laotzi-demo:get-children))
+3000
 ```
+
+If you want to enable stats-gathering, do the following:
+
+```cl
+> (laotzi-demo:enable-stats)
+ok
+```
+
+Let's make things interesting, and have the processes some code of varrying
+number of executions:
+
+```cl
+> (laotzi-demo:execute-tasks)
+```
+
+You can have the demo start tracking stats (in this case, repeatedly saving
+each process's number of reductions to ``./www/data.json``):
+
+```cl
+> (laotzi-demo:start-tracking)
+#(ok #(interval #Ref<0.0.0.6076>))
+```
+
+With that done, we can now open http://localhost:5099/ in your browser, where
+you will be greeted with something like the following:
+
+<img src="resources/images/screenshot.png" />
+
+This page has jquery AJAX polling set up, so you should see changes every 8 seconds or so. This will chew up your CPU, so don't leave it running :-)
 
 
 ## Under the Hood
