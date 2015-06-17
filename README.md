@@ -38,7 +38,7 @@ This will download and compile all the dependencies, and then start the LFE
 REPL (also automatically starting the ``laotzi-demo`` application and the
 built-in web server).
 
-### Bypassing ``localhost`` Default
+### Bypassing ``localhost`` Default [&#x219F;](#table-of-contents)
 
 If you'd like to run this demo's httpd server (which uses [barista](https://github.com/lfex/barista))
 on the non-loopback network interface, you'll need to update the ``start/1`` function in ``src/laotzi-http.lfe``:
