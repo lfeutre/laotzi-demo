@@ -4,7 +4,7 @@
 
 <img src="resources/images/DaodeTianzun.jpg" />
 
-**Table of Contents**
+##### Table of Contents
 
 * [Introduction](#introduction-)
 * [Setup](#setup-)
