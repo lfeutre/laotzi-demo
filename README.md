@@ -8,6 +8,7 @@
 
 * [Introduction](#introduction-)
 * [Setup](#setup-)
+  * [Bypassing localhost Default](#bypassing-localhost-default-)
 * [Usage](#usage-)
 * [Under the Hood](#under-the-hood-)
 * [Ideas for Future Work](#ideas-for-future-work-)
