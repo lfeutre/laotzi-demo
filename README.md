@@ -31,7 +31,7 @@ $ git clone git@github.com:oubiwann/laotzi-demo.git
 And then do :
 
 ```bash
-    $ make repl
+$ make repl
 ```
 
 This will download and compile all the dependencies, and then start the LFE
