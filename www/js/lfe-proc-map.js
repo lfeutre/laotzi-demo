@@ -27,7 +27,7 @@ function update (data) {
 
 function poll() {
     $.ajax({
-        url: "/data.json",
+        url: "/data.json?nocache=" + (new Date()).getTime(),
         type: "GET",
         dataType: "json",
         success: update
